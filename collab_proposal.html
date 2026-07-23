@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collaborator Proposal</title>
+<style>
+  :root{
+    --berry:#6D2E46;
+    --rose:#A26769;
+    --cream:#ECE2D0;
+    --dark:#2B2320;
+    --gray:#6B6560;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Segoe UI",Calibri,Arial,sans-serif;
+    background:#F4F1EC;
+    color:var(--dark);
+    padding:32px 16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;background:#fff;border-radius:16px;
+    box-shadow:0 10px 40px rgba(45,35,32,.10);overflow:hidden;}
+  header{padding:34px 40px 22px;}
+  header h1{font-family:Cambria,Georgia,serif;color:var(--berry);
+    font-size:34px;font-weight:700;letter-spacing:-.5px;}
+  header p{color:var(--gray);font-size:15px;font-style:italic;margin-top:6px;}
+  table{width:100%;border-collapse:collapse;}
+  thead th{
+    background:var(--berry);color:#fff;text-align:left;
+    font-size:12.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+    padding:16px 18px;
+  }
+  thead th:first-child{padding-left:40px;}
+  thead th:last-child{padding-right:40px;}
+  tbody td{padding:16px 18px;font-size:15.5px;vertical-align:middle;
+    border-bottom:1px solid #EFE9E0;}
+  tbody tr:nth-child(even){background:var(--cream);}
+  tbody tr:hover{background:#F7EFE8;}
+  td:first-child{padding-left:40px;}
+  td:last-child{padding-right:40px;}
+  .who{display:flex;align-items:center;gap:16px;}
+  .avatar{
+    width:58px;height:58px;border-radius:50%;flex:none;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-family:Cambria,Georgia,serif;font-size:24px;font-weight:700;
+    text-decoration:none;border:2px solid #fff;
+    box-shadow:0 2px 8px rgba(45,35,32,.18);
+    background-size:cover;background-position:center;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .avatar:hover{transform:scale(1.06);box-shadow:0 4px 14px rgba(109,46,70,.35);}
+  .avatar.berry{background-color:var(--berry);}
+  .avatar.rose{background-color:var(--rose);}
+  .name{font-weight:700;font-size:16px;}
+  .handle{display:block;font-size:12.5px;color:var(--gray);font-weight:400;margin-top:2px;}
+  .name a{color:var(--gray);text-decoration:none;}
+  .name a:hover{color:var(--berry);text-decoration:underline;}
+  .budget-firm{color:var(--berry);font-weight:700;}
+  .budget-service{color:var(--rose);font-weight:700;}
+  .budget-open{color:var(--gray);font-style:italic;}
+  footer{padding:16px 40px 30px;color:var(--gray);font-size:12px;font-style:italic;}
+  @media(max-width:720px){
+    body{padding:16px 10px;}
+    .wrap{border-radius:14px;}
+    header{padding:24px 20px 16px;}
+    header h1{font-size:24px;}
+    header p{font-size:13.5px;}
+    footer{padding:14px 20px 24px;}
+
+    /* Hide the table header; each row becomes a card */
+    thead{display:none;}
+    table,tbody,tr,td{display:block;width:100%;}
+    tbody tr{
+      background:#fff;
+      border:1px solid #EFE9E0;
+      border-radius:14px;
+      box-shadow:0 3px 12px rgba(45,35,32,.07);
+      margin:0 20px 16px;
+      width:auto;
+      padding:6px 0 10px;
+      overflow:hidden;
+    }
+    tbody tr:nth-child(even){background:#fff;}
+    tbody tr:hover{background:#fff;}
+
+    /* Name/photo header band of the card */
+    td:first-child{
+      padding:16px 18px !important;
+      background:var(--cream);
+      border-bottom:1px solid #E4DAC9;
+    }
+    .avatar{width:56px;height:56px;font-size:22px;}
+
+    /* Stat rows: label on left, value on right */
+    tbody td:not(:first-child){
+      padding:11px 18px !important;
+      border-bottom:1px solid #F1EBE1;
+      display:flex;justify-content:space-between;align-items:center;
+      font-size:15px;font-weight:600;
+    }
+    tbody td:last-child{border-bottom:none;}
+    tbody td:not(:first-child)::before{
+      content:attr(data-label);
+      color:var(--gray);font-size:12px;font-weight:700;
+      text-transform:uppercase;letter-spacing:.5px;
+      font-style:normal;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Collaborator Proposal</h1>
+      <p>Instagram reach &amp; budget overview — for owner review. Click any photo to open their Instagram.</p>
+    </header>
+    <table>
+      <thead>
+        <tr>
+          <th>Collaborator</th>
+          <th>Followers</th>
+          <th>Avg Views / Video</th>
+          <th>Budget Ask</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="who">
+              <a class="avatar rose" href="https://www.instagram.com/half_girlfrnd" target="_blank" rel="noopener" title="Open Keerthana on Instagram">K</a>
+              <div>
+                <span class="name">Keerthana</span>
+                <a class="handle" href="https://www.instagram.com/half_girlfrnd" target="_blank" rel="noopener">@half_girlfrnd</a>
+              </div>
+            </div>
+          </td>
+          <td data-label="Followers">645K</td>
+          <td data-label="Avg views / video">100K – 362K</td>
+          <td class="budget-firm" data-label="Budget ask">2,000 AED</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="who">
+              <a class="avatar berry" href="https://www.instagram.com/linturony" target="_blank" rel="noopener" title="Open Lintu Rony on Instagram">L</a>
+              <div>
+                <span class="name">Lintu Rony</span>
+                <a class="handle" href="https://www.instagram.com/linturony" target="_blank" rel="noopener">@linturony</a>
+              </div>
+            </div>
+          </td>
+          <td data-label="Followers">376K</td>
+          <td data-label="Avg views / video">39K – 200K</td>
+          <td class="budget-open" data-label="Budget ask">Not discussed</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="who">
+              <a class="avatar rose" href="https://www.instagram.com/anitta_joshy" target="_blank" rel="noopener" title="Open Anitta Joshy on Instagram">A</a>
+              <div>
+                <span class="name">Anitta Joshy</span>
+                <a class="handle" href="https://www.instagram.com/anitta_joshy" target="_blank" rel="noopener">@anitta_joshy</a>
+              </div>
+            </div>
+          </td>
+          <td data-label="Followers">164K</td>
+          <td data-label="Avg views / video">30K – 100K</td>
+          <td class="budget-open" data-label="Budget ask">Not discussed</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="who">
+              <a class="avatar berry" href="https://www.instagram.com/queen_of_hulken" target="_blank" rel="noopener" title="Open Akshaya on Instagram">A</a>
+              <div>
+                <span class="name">Akshaya</span>
+                <a class="handle" href="https://www.instagram.com/queen_of_hulken" target="_blank" rel="noopener">@queen_of_hulken</a>
+              </div>
+            </div>
+          </td>
+          <td data-label="Followers">146K</td>
+          <td data-label="Avg views / video">100K – 600K</td>
+          <td class="budget-firm" data-label="Budget ask">500–1,000 AED + service</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="who">
+              <a class="avatar rose" href="https://www.instagram.com/the.noora.gram" target="_blank" rel="noopener" title="Open Noora on Instagram">N</a>
+              <div>
+                <span class="name">Noora</span>
+                <a class="handle" href="https://www.instagram.com/the.noora.gram" target="_blank" rel="noopener">@the.noora.gram</a>
+              </div>
+            </div>
+          </td>
+          <td data-label="Followers">49K</td>
+          <td data-label="Avg views / video">14K – 20K</td>
+          <td class="budget-service" data-label="Budget ask">Free salon services</td>
+        </tr>
+      </tbody>
+    </table>
+    <footer>
+      Photos to be added once shared by each collaborator (the colored circle is a placeholder — clicking it still opens their Instagram). · Views shown are per-video ranges reported by the collaborator.
+    </footer>
+  </div>
+</body>
+</html>
